@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+   Learn javascript calculator with neumorphism
+   -->
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=0.1">
+      <title>Neumorphism Calculator</title>
+   </head>
+   <script type="text/javascript">
+      //function that display value
+              function dis(val)
+              {
+                  document.getElementById("result").value+=val
+              }
+                
+              //function that evaluates the digit and return result
+              function solve()
+              {
+                  let x = document.getElementById("result").value
+                  let y = eval(x)
+                  document.getElementById("result").value = y
+              }
+                
+              //function that clear the display
+              function clr()
+              {
+                  document.getElementById("result").value = ""
+              }
+   </script>
+   <style type="text/css">
+      button {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      background-color: #383838;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: inset 5px 5px 6px #171917, inset -5px -5px 6px #6A6767;
+      border: 0;
+      margin-right: 5px;
+      }
+      button:hover {
+      cursor: pointer;
+      background-color: #4B4B4B;
+      }button:active {
+      background-color: #505050;
+      }
+      button#r1:hover {
+      cursor: pointer;
+      background-color: #F59401;
+      }button#r1:active {
+      background-color: #E88D06;
+      }
+      #r1 {
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      margin-top: 10px;
+      background-color: #FFA012;
+      color: white;
+      font-size: 18px;
+      border-radius: 10px;
+      box-shadow: inset 5px 5px 6px #7D5A00, inset -5px -5px 6px #FFE177;
+      border: 0;
+      }
+      .display {
+      background-color: #383838;
+      padding: 15px;
+      padding-bottom: 40px;
+      width: 250px;
+      border-radius: 10px;
+      }
+      button#r1 {
+      position: relative;
+      left: 6px;
+      margin-top:20px ;
+      margin-bottom:30px ;
+      }
+      body {
+      font-family: Arial, sans-serif;
+      background-color: #EBEBEB;
+      margin: auto;
+      width: 25%;
+      border: 3px;
+      padding: 10%;
+      }
+      input {
+      width: 150px;
+      height: 80px;
+      margin-top: 10px;
+      background-color: #383838;
+      color: white;
+      border-radius: 10px;
+      box-shadow: inset 5px 5px 6px #171917, inset -5px -5px 6px #6A6767;
+      border: 0;
+      font-size: 22px;
+      padding: 10px;
+      text-align: right;
+      }
+   </style>
+   <body>
+      <div class="display">
+         <div class="first-row">
+            <input type="text" id="result" readonly>
+            <button id="r1" onclick="clr()">C</button>
+         </div>
+         <div class="second-row">
+            <button id="r2" value="7" onclick="dis('7')">7</button>
+            <button id="r2" value="8" onclick="dis('8')">8</button>
+            <button id="r2" value="9" onclick="dis('9')">9</button>
+            <button id="r1-4" value="/" onclick="dis('/')">/</button>
+         </div>
+         <div class="third-row">
+            <button id="r3-1" value="4" onclick="dis('4')">4</button>
+            <button id="r3-2" value="5" onclick="dis('5')">5</button>
+            <button id="r3-3" value="6" onclick="dis('6')">6</button>
+            <button id="r3-4" value="-" onclick="dis('-')">-</button>
+         </div>
+         <div class="fourth-row">
+            <button id="r4"  value="1" onclick="dis('1')">1</button>
+            <button id="r4"  value="2" onclick="dis('2')">2</button>
+            <button id="r4"  value="3" onclick="dis('3')">3</button>
+            <button id="r4-4" value="+" onclick="dis('+')">+</button>
+         </div>
+         <div class="fifth-row">
+            <button id="r5-1" value="." onclick="dis('.')">.</button>
+            <button id="r5-2" value="0" onclick="dis('0')">0</button>
+            <button id="r5-3" value="=" onclick="solve()">=</button>
+            <button id="r2-4" value="x" onclick="dis('*')">x</button>
+         </div>
+      </div>
+      <p style="padding-top: 20px;">Made with <span style="color: #e25555;">&#9829;</span> by Bagus Lindu Pamungkas</p>
+   </body>
+</html>
